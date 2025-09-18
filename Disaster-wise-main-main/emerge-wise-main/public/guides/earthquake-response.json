@@ -1,0 +1,99 @@
+{
+  "title": "Earthquake Safety - Himalayan Belt",
+  "region": "himalayan",
+  "disasterType": "earthquake",
+  "lastUpdated": "2024-01-15T00:00:00Z",
+  "guidelines": {
+    "before": [
+      {
+        "title": "Structural Assessment",
+        "description": "Evaluate building safety in seismic zones",
+        "priority": "critical",
+        "steps": [
+          "Get buildings assessed by structural engineers",
+          "Retrofit old buildings with seismic upgrades",
+          "Identify safe spots in each room (under tables, doorways)",
+          "Secure heavy furniture and appliances to walls"
+        ]
+      },
+      {
+        "title": "Emergency Preparedness",
+        "description": "Create earthquake response plan",
+        "priority": "high",
+        "steps": [
+          "Develop family emergency communication plan",
+          "Practice drop, cover, and hold on drills",
+          "Keep emergency kit accessible",
+          "Know evacuation routes from buildings"
+        ]
+      }
+    ],
+    "during": [
+      {
+        "title": "Drop, Cover, Hold On",
+        "description": "Immediate response during shaking",
+        "priority": "critical",
+        "steps": [
+          "Drop to hands and knees immediately",
+          "Take cover under sturdy desk or table",
+          "Hold on and protect head and neck",
+          "Stay in position until shaking stops"
+        ]
+      },
+      {
+        "title": "If Outside",
+        "description": "Outdoor earthquake response",
+        "priority": "critical",
+        "steps": [
+          "Move away from buildings, trees, power lines",
+          "Get to open ground if possible",
+          "If in mountains, watch for landslides",
+          "Stay where you are until shaking stops"
+        ]
+      }
+    ],
+    "after": [
+      {
+        "title": "Immediate Assessment",
+        "description": "Check for injuries and hazards",
+        "priority": "critical",
+        "steps": [
+          "Check yourself and others for injuries",
+          "Look for gas leaks, electrical damage, structural damage",
+          "Use stairs, never elevators",
+          "Be prepared for aftershocks"
+        ]
+      },
+      {
+        "title": "Mountain-Specific Precautions",
+        "description": "Special considerations for Himalayan regions",
+        "priority": "high",
+        "steps": [
+          "Watch for landslides and rockfalls",
+          "Avoid rivers that may be blocked",
+          "Check mountain roads for damage",
+          "Contact rescue services if trapped"
+        ]
+      }
+    ]
+  },
+  "emergencyContacts": {
+    "national": "112",
+    "disaster": "1078",
+    "medical": "108",
+    "mountainRescue": "1905"
+  },
+  "localResources": [
+    "Seismic monitoring stations",
+    "Mountain rescue teams",
+    "Emergency helipads",
+    "Avalanche rescue equipment"
+  ],
+  "richterScale": {
+    "1-2": "Not felt, recorded by seismographs",
+    "3-4": "Felt indoors, objects swing",
+    "5-6": "Felt by all, some damage",
+    "7-8": "Major earthquake, serious damage",
+    "9+": "Great earthquake, total destruction"
+  }
+}

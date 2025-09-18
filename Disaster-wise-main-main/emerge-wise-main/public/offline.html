@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DisasterGuard - Offline Mode</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: white;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      text-align: center;
+      max-width: 500px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin: 0 0 16px 0;
+      font-size: 28px;
+      color: #ef4444;
+    }
+    p {
+      margin: 0 0 24px 0;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+    .guides {
+      text-align: left;
+      margin: 24px 0;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+    .guide-item {
+      margin: 12px 0;
+      padding: 8px 12px;
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 3px solid #ef4444;
+      border-radius: 4px;
+    }
+    .guide-title {
+      font-weight: 600;
+      color: #ef4444;
+    }
+    .retry-btn {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .retry-btn:hover {
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🛡️</div>
+    <h1>DisasterGuard - Offline Mode</h1>
+    <p>You're currently offline, but emergency information is still available.</p>
+    
+    <div class="guides">
+      <h3 style="margin-top: 0; color: #ef4444;">🚨 Emergency Guidelines Available Offline:</h3>
+      
+      <div class="guide-item">
+        <div class="guide-title">🌀 Cyclone Safety</div>
+        <div>Coastal region preparedness and response protocols</div>
+      </div>
+      
+      <div class="guide-item">
+        <div class="guide-title">🏔️ Earthquake Response</div>
+        <div>Himalayan belt seismic safety procedures</div>
+      </div>
+      
+      <div class="guide-item">
+        <div class="guide-title">🌊 Flood Management</div>
+        <div>Gangetic plains flood response strategies</div>
+      </div>
+      
+      <div class="guide-item">
+        <div class="guide-title">🏜️ Drought Preparedness</div>
+        <div>Water conservation and community resilience</div>
+      </div>
+      
+      <div class="guide-item">
+        <div class="guide-title">⛰️ Landslide Safety</div>
+        <div>Western Ghats slope stability and evacuation</div>
+      </div>
+      
+      <div class="guide-item">
+        <div class="guide-title">🌡️ Heat Wave Protection</div>
+        <div>Central India extreme temperature management</div>
+      </div>
+    </div>
+    
+    <p><strong>Emergency Numbers (Always Available):</strong><br>
+    📞 National Emergency: 112<br>
+    🚨 Disaster Helpline: 1078<br>
+    🚑 Medical Emergency: 108</p>
+    
+    <button class="retry-btn" onclick="window.location.reload()">
+      🔄 Retry Connection
+    </button>
+  </div>
+
+  <script>
+    // Auto-refresh when connection is restored
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+    
+    // Show connection status
+    function updateConnectionStatus() {
+      if (!navigator.onLine) {
+        document.body.style.background = 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)';
+      }
+    }
+    
+    window.addEventListener('offline', updateConnectionStatus);
+    window.addEventListener('online', updateConnectionStatus);
+    updateConnectionStatus();
+  </script>
+</body>
+</html>

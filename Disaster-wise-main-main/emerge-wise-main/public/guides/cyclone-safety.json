@@ -1,0 +1,104 @@
+{
+  "title": "Cyclone Safety - Coastal India",
+  "region": "coastal",
+  "disasterType": "cyclone",
+  "lastUpdated": "2024-01-15T00:00:00Z",
+  "guidelines": {
+    "before": [
+      {
+        "title": "Monitor Weather Updates",
+        "description": "Track IMD bulletins and NDMA alerts regularly",
+        "priority": "critical",
+        "steps": [
+          "Check IMD website every 2 hours during cyclone season",
+          "Download official weather apps",
+          "Keep battery-powered radio ready",
+          "Subscribe to SMS alerts from local authorities"
+        ]
+      },
+      {
+        "title": "Secure Your Home",
+        "description": "Prepare your house for high winds and heavy rain",
+        "priority": "high",
+        "steps": [
+          "Install storm shutters or board up windows",
+          "Clear gutters and drains",
+          "Trim tree branches near the house",
+          "Secure outdoor furniture and equipment"
+        ]
+      },
+      {
+        "title": "Emergency Kit Preparation",
+        "description": "Gather essential supplies for 3-7 days",
+        "priority": "critical",
+        "steps": [
+          "Water: 4 liters per person per day",
+          "Non-perishable food for 7 days",
+          "First aid kit and medications",
+          "Flashlights, batteries, mobile chargers",
+          "Important documents in waterproof container"
+        ]
+      }
+    ],
+    "during": [
+      {
+        "title": "Stay Indoors",
+        "description": "Remain inside until authorities declare it safe",
+        "priority": "critical",
+        "steps": [
+          "Stay away from windows and glass doors",
+          "Move to the strongest part of the building",
+          "Avoid using electrical appliances",
+          "Listen to battery-powered radio for updates"
+        ]
+      },
+      {
+        "title": "Flood Precautions",
+        "description": "Protect yourself from storm surge and flooding",
+        "priority": "high",
+        "steps": [
+          "Move to higher floors if flooding occurs",
+          "Avoid walking in moving water",
+          "Stay away from electrical equipment if wet",
+          "Do not drive through flooded roads"
+        ]
+      }
+    ],
+    "after": [
+      {
+        "title": "Damage Assessment",
+        "description": "Check for damage safely",
+        "priority": "high",
+        "steps": [
+          "Wait for official all-clear before going outside",
+          "Check for gas leaks and electrical damage",
+          "Take photos for insurance claims",
+          "Report major damage to authorities"
+        ]
+      },
+      {
+        "title": "Community Support",
+        "description": "Help with recovery efforts",
+        "priority": "medium",
+        "steps": [
+          "Check on neighbors, especially elderly",
+          "Volunteer for cleanup efforts",
+          "Donate to relief organizations",
+          "Share resources with those in need"
+        ]
+      }
+    ]
+  },
+  "emergencyContacts": {
+    "national": "112",
+    "disaster": "1078",
+    "medical": "108",
+    "coastGuard": "1554"
+  },
+  "localResources": [
+    "Cyclone shelters in coastal areas",
+    "Emergency relief centers",
+    "Medical facilities with backup power",
+    "Evacuation routes to higher ground"
+  ]
+}
