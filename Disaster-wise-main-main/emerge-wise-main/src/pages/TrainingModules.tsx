@@ -17,6 +17,7 @@ interface TrainingModule {
   progress: number;
   completed: boolean;
   scenarios: string[];
+  videoUrl?: string;
 }
 
 const TrainingModules = () => {
@@ -36,7 +37,8 @@ const TrainingModules = () => {
       duration: 45,
       progress: 75,
       completed: false,
-      scenarios: ["Pre-landfall preparation", "During cyclone safety", "Post-cyclone recovery"]
+      scenarios: ["Pre-landfall preparation", "During cyclone safety", "Post-cyclone recovery"],
+      videoUrl: "https://youtu.be/B9qR2e3xyJo"
     },
     {
       id: "2", 
@@ -48,7 +50,8 @@ const TrainingModules = () => {
       duration: 60,
       progress: 100,
       completed: true,
-      scenarios: ["Building collapse response", "Mountain rescue", "Aftershock protocols"]
+      scenarios: ["Building collapse response", "Mountain rescue", "Aftershock protocols"],
+      videoUrl: "https://youtu.be/U4QLsUNPXnU"
     },
     {
       id: "3",
@@ -60,7 +63,8 @@ const TrainingModules = () => {
       duration: 30,
       progress: 20,
       completed: false,
-      scenarios: ["Early warning systems", "Evacuation procedures", "Relief distribution"]
+      scenarios: ["Early warning systems", "Evacuation procedures", "Relief distribution"],
+      videoUrl: "https://youtu.be/0b0yrwHvCdc"
     },
     {
       id: "4",
@@ -72,7 +76,8 @@ const TrainingModules = () => {
       duration: 40,
       progress: 0,
       completed: false,
-      scenarios: ["Water rationing", "Crop protection", "Community mobilization"]
+      scenarios: ["Water rationing", "Crop protection", "Community mobilization"],
+      videoUrl: "https://youtu.be/2c9cwS55h9U?si=vm4Wz5ZMJv9yKXCU"
     },
     {
       id: "5",
@@ -84,7 +89,8 @@ const TrainingModules = () => {
       duration: 50,
       progress: 30,
       completed: false,
-      scenarios: ["Slope stability assessment", "Early warning signs", "Rescue operations"]
+      scenarios: ["Slope stability assessment", "Early warning signs", "Rescue operations"],
+      videoUrl: "https://youtu.be/xnoheMCY0jc"
     },
     {
       id: "6",
@@ -96,7 +102,8 @@ const TrainingModules = () => {
       duration: 25,
       progress: 90,
       completed: false,
-      scenarios: ["Heat stress prevention", "Cooling center setup", "Vulnerable population care"]
+      scenarios: ["Heat stress prevention", "Cooling center setup", "Vulnerable population care"],
+      videoUrl: "https://youtu.be/PndkLH1tTWQ"
     }
   ];
 
@@ -143,6 +150,11 @@ const TrainingModules = () => {
     }
   };
 
+  const getYouTubeEmbedUrl = (url: string) => {
+    const videoId = url.split('/').pop()?.split('?')[0];
+    return `https://www.youtube.com/embed/${videoId}`;
+  };
+
   const completedModules = trainingModules.filter(m => m.completed).length;
   const totalModules = trainingModules.length;
   const overallProgress = Math.round((completedModules / totalModules) * 100);
@@ -154,24 +166,9 @@ const TrainingModules = () => {
         <div className="flex items-center gap-3">
           <GraduationCap className="h-8 w-8 text-primary" />
           <div>
-            <h1 className="text-3xl font-bold">AI-Powered Training Modules</h1>
-            <p className="text-muted-foreground">Region-specific disaster response training powered by machine learning</p>
+            <h1 className="text-3xl font-bold">Training Modules</h1>
           </div>
         </div>
-
-        {/* Overall Progress */}
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="font-semibold">Your Training Progress</h3>
-                <p className="text-sm text-muted-foreground">{completedModules} of {totalModules} modules completed</p>
-              </div>
-              <div className="text-2xl font-bold text-primary">{overallProgress}%</div>
-            </div>
-            <Progress value={overallProgress} className="h-3" />
-          </CardContent>
-        </Card>
       </div>
 
       {/* Filters */}
@@ -234,6 +231,20 @@ const TrainingModules = () => {
             </CardHeader>
 
             <CardContent className="space-y-4">
+              {/* YouTube Video Player */}
+              {module.videoUrl && (
+                <div className="aspect-video w-full">
+                  <iframe
+                    src={getYouTubeEmbedUrl(module.videoUrl)}
+                    title={module.title}
+                    className="w-full h-full rounded-lg"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              )}
+
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Clock className="h-4 w-4" />
                 <span>{module.duration} minutes</span>
