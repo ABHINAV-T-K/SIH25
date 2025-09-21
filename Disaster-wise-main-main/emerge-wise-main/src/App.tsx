@@ -15,6 +15,7 @@ import Auth from "./pages/Auth";
 import TrainingModules from "./pages/TrainingModules";
 import AccountSettings from "./pages/AccountSettings";
 import ProtectedRoute from "./components/ProtectedRoute";
+import SocketConnection from "./components/SocketConnection";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <SocketConnection />
       <BrowserRouter>
         <Routes>
           <Route path="/auth" element={<Auth />} />
